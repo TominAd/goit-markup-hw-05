@@ -110,6 +110,12 @@ img{
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+    
+}
+.logo-header{
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+    
 }
 
 .logo {
