@@ -168,8 +168,7 @@ img{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .site-nav .link:hover,
@@ -241,8 +240,7 @@ img{
     letter-spacing: 0.02em;
     color: var(--title-text-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav-mail {
@@ -461,8 +459,7 @@ img{
     height: 20px;
     display: flex;
     fill: var(--color-svg);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list{
     display: flex;
@@ -478,8 +475,7 @@ img{
     height: 44px;
     border-radius: 50%;
     background-color: #FFFFFF;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
@@ -630,8 +626,7 @@ img{
     height: 20px;
     display: flex;
     fill: var(--white-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* footer-social-list */
 .footer-social-list {
@@ -649,8 +644,7 @@ img{
     height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-list-link:hover .footer-social-list-icon,
@@ -778,7 +772,9 @@ img{
     border-radius: 4px;
     color: var(--praimary-text-color);
     background-color: var(--backgroundcolor-team); 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
 
 }
@@ -800,6 +796,8 @@ img{
 }
 
 .portfolio-li {
+    display: flex;
+    align-items: center;
     width: 370px;
     
     background-color: var(--white-color);
@@ -810,7 +808,9 @@ img{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-li-div{
@@ -837,6 +837,17 @@ img{
     
 
 }
+/* .portfolio-li-project {
+    
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
+/*.portfolio-li-project:hover,
+.portfolio-li-project:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
 
 .portfolio-ul .portfolio-li:nth-child(3n) {
     margin-right: 0;
@@ -861,10 +872,9 @@ img{
     padding-bottom: 63px;
     /* overflow: scroll; */
     transform: translateY(100%);
-    opacity: 0;
+    /* opacity: 0; */
 
-    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 250ms; */
+    
     
     
 
@@ -876,13 +886,22 @@ img{
     line-height: 28px;
     letter-spacing: 0.03em;
 }
-.portfolio-li-overlay:hover .overlay,
+.portfolio-li-project:hover .overlay,
+.portfolio-li-project:focus .overlay {
+    transform: translateY(0%);
+    opacity: 1;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+
+/* .portfolio-li-overlay:hover .overlay,
 .portfolio-li-overlay:focus .overlay{
     transform: translateY(0%);
     opacity: 1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
+} */
 /* =============END Pofolio=========== */
 
 /* =======backdrop Модоальное окно======= */
